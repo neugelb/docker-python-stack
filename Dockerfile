@@ -11,4 +11,4 @@ RUN apt-get -y update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/
 
 COPY requirements.txt /tmp/
-RUN ln -s /usr/include/locale.h /usr/include/xlocale.h && pip3 install --no-cache-dir Cython && pip3 install --no-cache-dir numpy && pip3 install --no-cache-dir -r /tmp/requirements.txt
+RUN ln -s /usr/include/locale.h /usr/include/xlocale.h && pip3 install --no-cache-dir Cython && pip3 install --no-cache-dir numpy && pip3 install --force --no-cache-dir -r /tmp/requirements.txt
